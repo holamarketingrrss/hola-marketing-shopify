@@ -1,0 +1,307 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product_list_fa6P9H": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "name": "t:names.header",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-end",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_list_text_YFtzcL": {
+              "type": "_product-list-text",
+              "name": "t:names.collection_title",
+              "settings": {
+                "text": "<h3>{{ closest.collection.title }}</h3>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h4",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_list_button_MWeP9V": {
+              "type": "_product-list-button",
+              "name": "t:names.product_list_button",
+              "settings": {
+                "label": "View all",
+                "open_in_new_tab": false,
+                "style_class": "link",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_list_text_YFtzcL",
+            "product_list_button_MWeP9V"
+          ]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 4,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_card_gallery_677WP3": {
+              "type": "_product-card-gallery",
+              "name": "t:names.product_card_media",
+              "settings": {
+                "image_ratio": "adapt",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_title_YXxMTj": {
+              "type": "product-title",
+              "name": "t:names.product_title",
+              "settings": {
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "price_JQzVV4": {
+              "type": "price",
+              "name": "t:names.product_price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h6",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "color": "var(--color-foreground)",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_card_gallery_677WP3",
+            "product_title_YXxMTj",
+            "price_JQzVV4"
+          ]
+        }
+      },
+      "disabled": true,
+      "name": "Featured collection",
+      "settings": {
+        "collection": "all",
+        "layout_type": "grid",
+        "carousel_on_mobile": false,
+        "max_products": 8,
+        "columns": 4,
+        "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
+        "columns_gap": 8,
+        "rows_gap": 24,
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "horizontal_alignment": "flex-start",
+        "gap": 28,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "custom_liquid_zKFdty": {
+      "type": "custom-liquid",
+      "name": "Hero",
+      "settings": {
+        "custom_liquid": "<section class=\"hm-home-hero\">\n  <style>\n    .hm-home-hero{\n      --hm-white:#ffffff;\n      --hm-black:#000000;\n      --hm-orange:#ff5000;\n      --hm-green:#2d9f54;\n      --hm-cream:#fdf6ec;\n      --hm-blue:#2462c7;\n      --hm-pink:#f5abd6;\n      --hm-violet:#d6a5ff;\n\n      min-height:100vh;\n      display:grid;\n      grid-template-columns:1fr 1fr;\n      font-family:\"DM Sans\", system-ui, sans-serif;\n      overflow:hidden;\n    }\n\n    .hm-home-hero *{ box-sizing:border-box; }\n\n    .hm-hero-left,\n    .hm-hero-right{\n      position:relative;\n      min-height:100vh;\n      padding:32px clamp(22px,4vw,64px);\n    }\n\n    .hm-hero-left{\n      background:var(--hm-pink);\n      color:var(--hm-white);\n      display:flex;\n      flex-direction:column;\n      justify-content:center;\n      align-items:center;\n      text-align:center;\n    }\n\n    .hm-hero-right{\n      background:var(--hm-green);\n      display:flex;\n      align-items:center;\n      justify-content:center;\n    }\n\n    .hm-hero-title{\n      margin:0;\n      max-width:780px;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:clamp(44px,6.3vw,104px);\n      line-height:.92;\n      letter-spacing:-.07em;\n      text-transform:uppercase;\n      font-weight:700;\n    }\n\n    .hm-hero-title em{\n      display:block;\n      font-style:italic;\n      letter-spacing:-.08em;\n    }\n\n    .hm-hero-sub{\n      margin:28px auto 0;\n      max-width:660px;\n      font-size:clamp(18px,2vw,30px);\n      line-height:1.1;\n      font-weight:600;\n       letter-spacing:-1px;\n      color:var(--hm-white);\n    }\n\n    .hm-hero-btn{\n      margin-top:42px;\n      width:min(640px,88%);\n      min-height:58px;\n      display:inline-flex;\n      align-items:center;\n      justify-content:center;\n      gap:28px;\n      border:2px solid var(--hm-black);\n      border-radius:18px;\n      background:var(--hm-orange);\n      color:var(--hm-white);\n      text-decoration:none;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:clamp(16px,1.6vw,24px);\n      font-weight:600;\n      text-transform:uppercase;\n      letter-spacing:-1px;\n      transition:transform .18s ease, box-shadow .18s ease, background .18s ease;\n    }\n\n    .hm-hero-media{\n      position:relative;\n      width:min(900px,100%);\n      aspect-ratio:1/1;\n      z-index:2;\n \n    }\n\n    .hm-hero-gif{\n      width:100%\n    }\n\n   \n    .hm-menu-heart:hover{\n      transform:scale(1.05) rotate(-3deg);\n      color:var(--hm-white);\n    }\n\n    .hm-sticker{\n      position:absolute;\n      z-index:3;\n      user-select:none;\n      pointer-events:none;\n      font-size:clamp(28px,4vw,58px);\n      filter:drop-shadow(0 5px 0 rgba(0,0,0,.14));\n      animation:hmFloat 4s ease-in-out infinite;\n    }\n\n    .hm-sticker.camera{ top:10%; left:8%; }\n    .hm-sticker.spark{ bottom:10%; right:14%; animation-delay:.8s; }\n\n    @keyframes hmFloat{\n      0%,100%{ transform:translateY(0) rotate(-6deg); }\n      50%{ transform:translateY(-14px) rotate(6deg); }\n    }\n\n    @media(max-width:900px){\n      .hm-home-hero{\n        grid-template-columns:1fr;\n      }\n\n      .hm-hero-left,\n      .hm-hero-right{\n        min-height:auto;\n        padding:28px 20px;\n      }\n\n      .hm-hero-left{\n        min-height:62vh;\n        padding-top:120px;\n      }\n\n      .hm-hero-right{\n        min-height:48vh;\n      }\n\n      .hm-hero-logo{\n        width:230px;\n        top:24px;\n        left:20px;\n      }\n\n      .hm-hero-title{\n        font-size:clamp(42px,14vw,76px);\n      }\n\n      .hm-hero-sub{\n        font-size:20px;\n      }\n\n      .hm-hero-btn{\n        width:100%;\n        max-width:430px;\n        min-height:54px;\n      }\n\n      .hm-hero-media{\n        width:min(390px,88vw);\n      }\n\n      .hm-menu-heart{\n        top:18px;\n        right:18px;\n        width:118px;\n        height:98px;\n        font-size:18px;\n      }\n\n      .hm-sticker.camera{ top:12%; left:8%; }\n      .hm-sticker.spark{ bottom:8%; right:8%; }\n    }\n  </style>\n\n  <div class=\"hm-hero-left\">\n   \n\n    <div>\n      <h1 class=\"hm-hero-title\">\n        Creadas para\n        <em>crear tu marca</em>\n      </h1>\n\n      <p class=\"hm-hero-sub\">\n        Una agencia de marketing con hambre de hacer<br>\n        tu marca más creativa y vendible\n      </p>\n\n      <a class=\"hm-hero-btn\" href=\"/pages/cotiza-tu-pack\">\n        Empecemos juntos <span>→</span>\n      </a>\n    </div>\n  </div>\n\n  <div class=\"hm-hero-right\">\n\n\n    <span class=\"hm-sticker camera\">📸</span>\n\n    <div class=\"hm-hero-media\">\n      <img\n        class=\"hm-hero-gif\"\n        src=\"https://cdn.shopify.com/s/files/1/0743/9790/9131/files/690df56ca7e245488c803732_gif_nuevo_1.gif?v=1778171834\"\n        alt=\"Hola Marketing\"\n        loading=\"eager\"\n      >\n    </div>\n\n    <span class=\"hm-sticker spark\">✨</span>\n  </div>\n</section>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "custom_liquid_B3btF4": {
+      "type": "custom-liquid",
+      "name": "purpose",
+      "settings": {
+        "custom_liquid": "<section class=\"hm-purpose-img\">\n  <style>\n    .hm-purpose-img{\n      width:100%;\n      background:#fdf6ec;\n      overflow:hidden;\n    }\n\n    .hm-purpose-img picture,\n    .hm-purpose-img img{\n      display:block;\n      width:100%;\n    }\n\n    .hm-purpose-img img{\n      height:auto;\n      object-fit:cover;\n    }\n  </style>\n\n  <picture>\n    <source \n      media=\"(max-width: 749px)\" \n      srcset=\"https://cdn.shopify.com/s/files/1/0743/9790/9131/files/seccion_que_sigue_mobile.avif?v=1778177011\"\n    >\n    <img\n      src=\"https://cdn.shopify.com/s/files/1/0743/9790/9131/files/seccion_que_sigue.avif?v=1778177010\"\n      alt=\"Nuestro propósito - Hola Marketing\"\n      loading=\"lazy\"\n    >\n  </picture>\n</section>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "custom_liquid_HC3gEx": {
+      "type": "custom-liquid",
+      "name": "packs",
+      "settings": {
+        "custom_liquid": "<section class=\"hm-packs\">\n  <style>\n    .hm-packs{\n      --hm-white:#ffffff;\n      --hm-black:#000000;\n      --hm-orange:#ff5000;\n      --hm-green:#2d9f54;\n      --hm-cream:#fdf6ec;\n\n      background:var(--hm-cream);\n      padding:clamp(60px,8vw,120px) clamp(20px,5vw,90px);\n      overflow:hidden;\n    }\n\n    .hm-packs *{\n      box-sizing:border-box;\n    }\n\n    .hm-packs-wrap{\n      max-width:1500px;\n      margin:auto;\n    }\n\n    .hm-packs-title{\n      margin:0;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:clamp(32px,4vw,68px);\n      line-height:.95;\n      text-transform:uppercase;\n      letter-spacing:-.07em;\n      color:#000;\n    }\n\n    .hm-packs-sub{\n      margin:22px 0 50px;\n      max-width:1100px;\n      font-family:\"DM Sans\", sans-serif;\n      font-size:clamp(17px,1.3vw,28px);\n      line-height:1.4;\n      color:#000;\n    }\n\n    .hm-packs-grid{\n      display:grid;\n      grid-template-columns:repeat(3,1fr);\n      gap:28px;\n    }\n\n    .hm-pack{\n      background:transparent;\n      border:2px solid #000;\n      border-radius:28px;\n      padding:22px;\n      display:flex;\n      flex-direction:column;\n      transition:.25s ease;\n    }\n\n    .hm-pack:hover{\n      transform:translateY(-8px);\n    }\n\n    .hm-pack-media{\n      width:100%;\n      aspect-ratio:16/10;\n      border-radius:18px;\n      overflow:hidden;\n      border:2px solid #000;\n    }\n\n    .hm-pack-media img{\n      width:100%;\n      height:100%;\n      object-fit:cover;\n      display:block;\n    }\n\n    .hm-pack-name{\n      margin:28px 0 14px;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:clamp(22px,1.8vw,38px);\n      text-transform:uppercase;\n      letter-spacing:-.05em;\n      color:#000;\n    }\n\n    .hm-pack-price{\n      margin-bottom:18px;\n      padding-bottom:16px;\n      border-bottom:2px dashed #000;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:clamp(24px,2vw,40px);\n      font-weight:900;\n      color:#000;\n    }\n\n    .hm-pack-text{\n      font-family:\"DM Sans\", sans-serif;\n      font-size:18px;\n      line-height:1.45;\n      color:#000;\n      margin-bottom:38px;\n      flex:1;\n    }\n\n    .hm-pack-btn{\n      width:100%;\n      min-height:62px;\n      display:flex;\n      align-items:center;\n      justify-content:center;\n      gap:20px;\n      border:2px solid #000;\n      border-radius:18px;\n      background:var(--hm-orange);\n      color:#fff;\n      text-decoration:none;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:18px;\n      font-weight:900;\n      text-transform:uppercase;\n      box-shadow:0 4px 0 #000;\n      transition:.18s ease;\n    }\n\n    .hm-pack-btn:hover{\n      background:var(--hm-green);\n      color:#fff;\n      transform:translateY(-3px);\n      box-shadow:0 7px 0 #000;\n    }\n\n    .hm-pack-btn span{\n      font-size:1.5em;\n    }\n\n    @media(max-width:1100px){\n      .hm-packs-grid{\n        grid-template-columns:1fr;\n        gap:24px;\n      }\n\n      .hm-pack{\n        border-radius:22px;\n      }\n\n      .hm-pack-btn{\n        min-height:56px;\n        font-size:16px;\n      }\n    }\n\n  </style>\n\n  <div class=\"hm-packs-wrap\">\n\n    <h2 class=\"hm-packs-title\">\n      Elegí tu forma de hacernos parte 👇🏻\n    </h2>\n\n    <p class=\"hm-packs-sub\">\n      Ofrecemos dos packs principales para trabajar con marcas. \n      Explorá cada opción para descubrir cuál se adapta mejor a ti. \n      También puedes crear un pack personalizado o escribirnos para consultar el clima 😎\n    </p>\n\n    <div class=\"hm-packs-grid\">\n\n      <!-- PACK 1 -->\n      <article class=\"hm-pack\">\n\n        <div class=\"hm-pack-media\">\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0743/9790/9131/files/pack1.avif?v=1778177559\"\n            alt=\"Pack Esencial\"\n            loading=\"lazy\"\n          >\n        </div>\n\n        <h3 class=\"hm-pack-name\">\n          Pack Esencial 💻\n        </h3>\n\n        <div class=\"hm-pack-price\">\n          $1,200\n        </div>\n\n        <div class=\"hm-pack-text\">\n          Recomendado para marcas que empiezan de cero y quieren adentrarse en el marketing de verdad.\n          Obtén todo lo que necesitas para lanzar tu marca en tan solo 10 días.\n        </div>\n\n        <a href=\"/pages/pack-esencial\" class=\"hm-pack-btn\">\n          Empecemos juntos <span>→</span>\n        </a>\n\n      </article>\n\n\n      <!-- PACK 2 -->\n      <article class=\"hm-pack\">\n\n        <div class=\"hm-pack-media\">\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0743/9790/9131/files/pack2.avif?v=1778177559\"\n            alt=\"Pack Premium\"\n            loading=\"lazy\"\n          >\n        </div>\n\n        <h3 class=\"hm-pack-name\">\n          Pack Premium 💻\n        </h3>\n\n        <div class=\"hm-pack-price\">\n          $3,000\n        </div>\n\n        <div class=\"hm-pack-text\">\n          Presencia completa en redes sociales, sitio web personalizado, estrategia integral, producción audiovisual y más.\n          Un equipo trabajando todos los días para que tu marca brille.\n        </div>\n\n        <a href=\"/pages/pack-premium\" class=\"hm-pack-btn\">\n          Empecemos juntos <span>→</span>\n        </a>\n\n      </article>\n\n\n      <!-- PACK 3 -->\n      <article class=\"hm-pack\">\n\n        <div class=\"hm-pack-media\">\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0743/9790/9131/files/pack2.avif?v=1778177559\"\n            alt=\"Pack personalizado\"\n            loading=\"lazy\"\n          >\n        </div>\n\n        <h3 class=\"hm-pack-name\">\n          Pack Personalizado 🎧\n        </h3>\n\n        <div class=\"hm-pack-price\">\n          Tú decides\n        </div>\n\n        <div class=\"hm-pack-text\">\n          Armá tu propuesta ideal mezclando branding, contenido, automatizaciones, campañas, sitios web y todo lo que tu marca necesite.\n        </div>\n\n        <a href=\"/pages/cotiza-tu-pack\" class=\"hm-pack-btn\">\n          Empecemos juntos <span>→</span>\n        </a>\n\n      </article>\n\n    </div>\n\n  </div>\n\n</section>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "custom_liquid_DtEJE3": {
+      "type": "custom-liquid",
+      "name": "Sobre nosotros",
+      "settings": {
+        "custom_liquid": "<section class=\"hm-about-preview\">\n  <style>\n    .hm-about-preview{\n      --hm-black:#000000;\n      --hm-orange:#ff5000;\n      --hm-green:#2d9f54;\n      --hm-cream:#fdf6ec;\n\n      background:var(--hm-cream);\n      padding:clamp(60px,8vw,120px) clamp(20px,5vw,90px);\n      overflow:hidden;\n    }\n\n    .hm-about-preview *{\n      box-sizing:border-box;\n    }\n\n    .hm-about-wrap{\n      max-width:1400px;\n      margin:0 auto;\n      display:grid;\n      grid-template-columns:.95fr 1.05fr;\n      gap:clamp(40px,7vw,100px);\n      align-items:center;\n    }\n\n    .hm-about-media{\n      display:flex;\n      justify-content:center;\n      align-items:center;\n    }\n\n    .hm-about-media img{\n      width:100%;\n      height:100%;\n      display:block;\n    }\n\n    .hm-about-title{\n      margin:0 0 32px;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:clamp(30px,3.4vw,62px);\n      line-height:1.08;\n      letter-spacing:-.06em;\n      text-transform:uppercase;\n      color:var(--hm-black);\n    }\n\n    .hm-about-text{\n      max-width:760px;\n      font-family:\"DM Sans\", sans-serif;\n      font-size:clamp(17px,1.25vw,24px);\n      line-height:1.45;\n      color:var(--hm-black);\n    }\n\n    .hm-about-text p{\n      margin:0 0 24px;\n    }\n\n    .hm-about-btn{\n      margin-top:18px;\n      width:min(430px,100%);\n      min-height:58px;\n      display:flex;\n      align-items:center;\n      justify-content:center;\n      gap:22px;\n      border:2px solid var(--hm-black);\n      border-radius:16px;\n      background:var(--hm-orange);\n      color:#fff;\n      text-decoration:none;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:18px;\n      font-weight:900;\n      text-transform:uppercase;\n      box-shadow:0 4px 0 var(--hm-black);\n      transition:.18s ease;\n    }\n\n    .hm-about-btn:hover{\n      background:var(--hm-green);\n      color:#fff;\n      transform:translateY(-3px);\n      box-shadow:0 7px 0 var(--hm-black);\n    }\n\n    .hm-about-btn span{\n      font-size:1.5em;\n      line-height:1;\n    }\n\n    @media(max-width:900px){\n      .hm-about-wrap{\n        grid-template-columns:1fr;\n        text-align:left;\n      }\n\n      .hm-about-media{\n        order:1;\n      }\n\n      .hm-about-content{\n        order:2;\n      }\n\n      .hm-about-title{\n        font-size:clamp(30px,9vw,52px);\n      }\n\n      .hm-about-btn{\n        width:100%;\n      }\n    }\n  </style>\n\n  <div class=\"hm-about-wrap\">\n\n    <div class=\"hm-about-media\">\n      <img\n        src=\"https://cdn.shopify.com/s/files/1/0743/9790/9131/files/690df9ac604ed84776ba209d_arriba.gif?v=1778178315\"\n        alt=\"Hola Marketing\"\n        loading=\"lazy\"\n      >\n    </div>\n\n    <div class=\"hm-about-content\">\n      <h2 class=\"hm-about-title\">\n        Estamos aquí para darle vida a tus visiones y pasar un buen rato creando para tí🚀\n      </h2>\n\n      <div class=\"hm-about-text\">\n        <p>\n          Fundamos esta agencia con una sola meta: que estés aquí, en este preciso momento.\n          ¡Y lo logramos! Ahora sí, es momento de que nos pongas caras. Esperamos haber elegido\n          buenas fotos (aunque no prometemos estar siempre peinadas).\n        </p>\n\n        <p>\n          Somos <strong>Hola Marketing</strong>, tus nuevas aliadas para hacer que tu marca se vea\n          única, real y woowwww!\n        </p>\n      </div>\n\n      <a href=\"/pages/sobre-nosotras\" class=\"hm-about-btn\">\n        Sobre nosotras <span>→</span>\n      </a>\n    </div>\n\n  </div>\n</section>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "custom_liquid_z666WW": {
+      "type": "custom-liquid",
+      "name": "Blog-Proyectos",
+      "settings": {
+        "custom_liquid": "<section class=\"hm-projects\">\n  <style>\n    .hm-projects{\n      background:#fdf6ec;\n      padding:clamp(60px,8vw,110px) clamp(20px,5vw,80px);\n    }\n\n    .hm-projects *{\n      box-sizing:border-box;\n    }\n\n    .hm-projects-wrap{\n      max-width:1500px;\n      margin:auto;\n    }\n\n    .hm-projects-head{\n      display:flex;\n      justify-content:space-between;\n      align-items:center;\n      gap:20px;\n      margin-bottom:50px;\n      flex-wrap:wrap;\n    }\n\n    .hm-projects-title{\n      margin:0;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:clamp(28px,3vw,58px);\n      line-height:1;\n      letter-spacing:-.06em;\n      text-transform:uppercase;\n      color:#000;\n    }\n\n    .hm-projects-btn{\n      min-height:56px;\n      padding:0 32px;\n      display:flex;\n      align-items:center;\n      justify-content:center;\n      border:2px solid #000;\n      border-radius:18px;\n      background:#ff5000;\n      color:#fff;\n      text-decoration:none;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:16px;\n      font-weight:900;\n      text-transform:uppercase;\n      box-shadow:0 4px 0 #000;\n      transition:.18s ease;\n    }\n\n    .hm-projects-btn:hover{\n      background:#2d9f54;\n      color:#fff;\n      transform:translateY(-3px);\n    }\n\n    .hm-projects-grid{\n      display:grid;\n      grid-template-columns:repeat(3,1fr);\n      gap:28px;\n    }\n\n    .hm-project{\n      text-decoration:none;\n      color:#000;\n    }\n\n    .hm-project-media{\n      aspect-ratio:4/4;\n      border:2px solid #000;\n      border-radius:24px;\n      overflow:hidden;\n      background:#eee;\n    }\n\n    .hm-project-media img{\n      width:100%;\n      height:100%;\n      object-fit:cover;\n      display:block;\n    }\n\n    .hm-project-name{\n      margin:22px 0 14px;\n      text-align:center;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:clamp(20px,1.5vw,34px);\n      text-transform:uppercase;\n      letter-spacing:-.05em;\n    }\n\n    .hm-project-tag{\n      width:fit-content;\n      margin:auto;\n      padding:10px 22px;\n      border:2px solid #000;\n      border-radius:999px;\n      font-family:\"DM Sans\", sans-serif;\n      font-size:16px;\n      font-weight:700;\n    }\n\n    @media(max-width:900px){\n\n      .hm-projects-grid{\n        grid-template-columns:1fr;\n      }\n\n      .hm-projects-btn{\n        width:100%;\n      }\n\n    }\n\n  </style>\n\n  <div class=\"hm-projects-wrap\">\n\n    <div class=\"hm-projects-head\">\n\n      <h2 class=\"hm-projects-title\">\n        Explora nuestros proyectos favoritos 💼\n      </h2>\n\n      <a href=\"/blogs/proyectos\" class=\"hm-projects-btn\">\n        Ver proyectos y reviews\n      </a>\n\n    </div>\n\n\n    <div class=\"hm-projects-grid\">\n\n      {% assign featured_projects = blogs.proyectos.articles | slice: 0, 3 %}\n\n      {% if featured_projects.size > 0 %}\n\n        {% for article in featured_projects %}\n\n          <a href=\"{{ article.url }}\" class=\"hm-project\">\n\n            <div class=\"hm-project-media\">\n\n              {% if article.image %}\n                <img\n                  src=\"{{ article.image | image_url: width: 900 }}\"\n                  alt=\"{{ article.title }}\"\n                  loading=\"lazy\"\n                >\n              {% endif %}\n\n            </div>\n\n            <div class=\"hm-project-name\">\n              {{ article.title }}\n            </div>\n\n            <div class=\"hm-project-tag\">\n              {{ article.tags.first }}\n            </div>\n\n          </a>\n\n        {% endfor %}\n\n      {% else %}\n\n        <!-- skeleton -->\n\n        {% for i in (1..3) %}\n\n          <div class=\"hm-project\">\n\n            <div class=\"hm-project-media\"></div>\n\n            <div class=\"hm-project-name\">\n              Próximamente\n            </div>\n\n            <div class=\"hm-project-tag\">\n              Proyecto\n            </div>\n\n          </div>\n\n        {% endfor %}\n\n      {% endif %}\n\n    </div>\n\n  </div>\n\n</section>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "custom_liquid_fkg3Xk": {
+      "type": "custom-liquid",
+      "name": "Productos",
+      "settings": {
+        "custom_liquid": "<section class=\"hm-club\">\n  <style>\n    .hm-club{\n      background:#fdf6ec;\n      padding:clamp(60px,8vw,110px) clamp(20px,5vw,80px);\n      overflow:hidden;\n    }\n\n    .hm-club *{ box-sizing:border-box; }\n\n    .hm-club-wrap{\n      max-width:1500px;\n      margin:0 auto;\n    }\n\n    .hm-club-title{\n      margin:0 0 50px;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:clamp(34px,4vw,74px);\n      line-height:1;\n      letter-spacing:-.07em;\n      text-transform:uppercase;\n      font-style:italic;\n      color:#000;\n    }\n\n    .hm-club-grid{\n      display:grid;\n      grid-template-columns:1fr 1fr;\n      gap:36px;\n      align-items:stretch;\n    }\n\n    .hm-club-left{\n      display:grid;\n      grid-template-columns:1fr 1fr;\n      gap:26px;\n    }\n\n    .hm-club-product{\n      color:#000;\n      text-decoration:none;\n      display:flex;\n      flex-direction:column;\n    }\n\n    .hm-club-img{\n      width:100%;\n      aspect-ratio:1/1.1;\n      border:2px solid #000;\n      border-radius:18px;\n      overflow:hidden;\n      background:#fff;\n    }\n\n    .hm-club-img img{\n      width:100%;\n      height:100%;\n      object-fit:cover;\n      display:block;\n      transition:.25s ease;\n    }\n\n    .hm-club-product:hover img,\n    .hm-club-membership:hover img{\n      transform:scale(1.04);\n    }\n\n    .hm-club-name{\n      margin:24px 0 14px;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:clamp(18px,1.35vw,28px);\n      line-height:1.1;\n      letter-spacing:-.05em;\n      text-transform:uppercase;\n      color:#000;\n    }\n\n    .hm-club-text{\n      margin:0 0 24px;\n      font-family:\"DM Sans\", sans-serif;\n      font-size:clamp(16px,1.2vw,22px);\n      line-height:1.35;\n      color:#000;\n    }\n\n    .hm-club-price{\n      margin-top:auto;\n      width:fit-content;\n      min-height:42px;\n      padding:0 18px;\n      display:flex;\n      align-items:center;\n      gap:12px;\n      border:2px solid #000;\n      border-radius:8px;\n      background:#ff5000;\n      color:#fff;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:18px;\n      font-weight:900;\n      text-transform:uppercase;\n      box-shadow:0 3px 0 #000;\n      transition:.18s ease;\n    }\n\n    .hm-club-product:hover .hm-club-price,\n    .hm-club-membership:hover .hm-club-price{\n      background:#2d9f54;\n      transform:translateY(-2px);\n      box-shadow:0 5px 0 #000;\n    }\n\n    .hm-club-membership{\n      display:grid;\n      grid-template-columns:.95fr 1fr;\n      gap:34px;\n      align-items:center;\n      padding:clamp(24px,3vw,42px);\n      border:2px solid #000;\n      border-radius:28px;\n      color:#000;\n      text-decoration:none;\n    }\n\n    .hm-club-membership .hm-club-img{\n      aspect-ratio:1/1;\n    }\n\n    .hm-club-membership-content{\n      display:flex;\n      flex-direction:column;\n      height:100%;\n      justify-content:center;\n    }\n\n    .hm-club-membership-title{\n      margin:0 0 22px;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:clamp(24px,2vw,40px);\n      line-height:1.1;\n      letter-spacing:-.05em;\n      text-transform:uppercase;\n      color:#000;\n    }\n\n    .hm-club-membership-text{\n      margin:0 0 auto;\n      font-family:\"DM Sans\", sans-serif;\n      font-size:clamp(18px,1.35vw,26px);\n      line-height:1.35;\n      color:#000;\n    }\n\n    .hm-club-membership .hm-club-price{\n      width:100%;\n      justify-content:center;\n      margin-top:40px;\n    }\n\n    @media(max-width:1100px){\n      .hm-club-grid{\n        grid-template-columns:1fr;\n      }\n    }\n\n    @media(max-width:700px){\n      .hm-club-left{\n        grid-template-columns:1fr;\n      }\n\n      .hm-club-membership{\n        grid-template-columns:1fr;\n      }\n\n      .hm-club-title{\n        margin-bottom:32px;\n      }\n\n      .hm-club-price{\n        width:100%;\n        justify-content:center;\n      }\n    }\n  </style>\n\n  <div class=\"hm-club-wrap\">\n\n    <h2 class=\"hm-club-title\">\n      Para creativos 👇🏻\n    </h2>\n\n    <div class=\"hm-club-grid\">\n\n      <div class=\"hm-club-left\">\n\n        <a class=\"hm-club-product\" href=\"https://clubhm.com.ar/products/kit-cm-a-freelancer\">\n          <div class=\"hm-club-img\">\n            <img\n              src=\"https://cdn.shopify.com/s/files/1/0743/9790/9131/files/cm.avif?v=1778179416\"\n              alt=\"Ebook de CM básico a CM con IA\"\n              loading=\"lazy\"\n            >\n          </div>\n\n          <h3 class=\"hm-club-name\">\n            Ebook \"De CM básico a CM con IA\"\n          </h3>\n\n          <p class=\"hm-club-text\">\n            Procesos y plantillas para vender, crear y entregar como freelancer profesional.\n          </p>\n\n          <div class=\"hm-club-price\">\n            $20.00 <span>→</span>\n          </div>\n        </a>\n\n\n        <a class=\"hm-club-product\" href=\"https://clubhm.com.ar/products/kit-freelancer-a-equipo\">\n          <div class=\"hm-club-img\">\n            <img\n              src=\"https://cdn.shopify.com/s/files/1/0743/9790/9131/files/agencia.avif?v=1778179416\"\n              alt=\"Ebook tu agencia millonaria en 2026 con IA\"\n              loading=\"lazy\"\n            >\n          </div>\n\n          <h3 class=\"hm-club-name\">\n            Ebook \"Tu agencia millonaria en 2026 con IA\"\n          </h3>\n\n          <p class=\"hm-club-text\">\n            Flujos, roles y recursos para escalar y dirigir tu equipo con claridad.\n          </p>\n\n          <div class=\"hm-club-price\">\n            $35.00 <span>→</span>\n          </div>\n        </a>\n\n      </div>\n\n\n      <a class=\"hm-club-membership\" href=\"https://clubhm.com.ar/products/membresia-club-hm\">\n\n        <div class=\"hm-club-img\">\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0743/9790/9131/files/6995b6b3078be8f504c41462_producto_3.avif?v=1778179599\"\n            alt=\"Membresía Club HM\"\n            loading=\"lazy\"\n          >\n        </div>\n\n        <div class=\"hm-club-membership-content\">\n          <h3 class=\"hm-club-membership-title\">\n            Membresía Club HM\n          </h3>\n\n          <p class=\"hm-club-membership-text\">\n            Todo el contenido y recursos que tu marca necesita mes a mes.\n          </p>\n\n          <div class=\"hm-club-price\">\n            $7 mensuales <span>→</span>\n          </div>\n        </div>\n\n      </a>\n\n    </div>\n\n  </div>\n</section>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "custom_liquid_4JkkpA": {
+      "type": "custom-liquid",
+      "name": "mentoria",
+      "settings": {
+        "custom_liquid": "<section class=\"hm-mentoria\">\n  <style>\n    .hm-mentoria{\n      background:#fdf6ec;\n      padding:clamp(40px,6vw,90px) clamp(20px,5vw,70px);\n      overflow:hidden;\n    }\n\n    .hm-mentoria *{\n      box-sizing:border-box;\n    }\n\n    .hm-mentoria-wrap{\n      max-width:1500px;\n      margin:auto;\n      position:relative;\n    }\n\n    .hm-mentoria-picture,\n    .hm-mentoria-picture img{\n      display:block;\n      width:100%;\n    }\n\n    .hm-mentoria-picture img{\n      height:auto;\n    }\n\n    .hm-mentoria-btn{\n      position:absolute;\n      left:58.5%;\n      bottom:16.5%;\n      transform:translateX(-50%);\n      min-height:58px;\n      padding:0 clamp(24px,3vw,40px);\n\n      display:flex;\n      align-items:center;\n      justify-content:center;\n      gap:20px;\n\n      border:2px solid #000;\n      border-radius:16px;\n\n      background:#ff5000;\n      color:#fff;\n      text-decoration:none;\n\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:clamp(14px,1vw,20px);\n      font-weight:900;\n      text-transform:uppercase;\n      letter-spacing:-.04em;\n\n      box-shadow:0 4px 0 #000;\n      transition:.18s ease;\n\n      z-index:3;\n      white-space:nowrap;\n    }\n\n    .hm-mentoria-btn:hover{\n      background:#2462c7;\n      color:#fff;\n      transform:translateX(-50%) translateY(-3px);\n      box-shadow:0 7px 0 #000;\n    }\n\n    .hm-mentoria-btn span{\n      font-size:1.4em;\n      line-height:1;\n    }\n\n    @media(max-width:749px){\n\n      .hm-mentoria{\n        padding:40px 0;\n      }\n\n      .hm-mentoria-btn{\n        width:75%;\n        min-height:50px;\n\n        bottom:10%;\n\n        font-size:14px;\n        gap:12px;\n      }\n\n    }\n\n  </style>\n\n  <div class=\"hm-mentoria-wrap\">\n\n    <picture class=\"hm-mentoria-picture\">\n\n      <source\n        media=\"(max-width: 749px)\"\n        srcset=\"https://cdn.shopify.com/s/files/1/0743/9790/9131/files/690de878c52a8d376f7801d8_TEL2-min.avif?v=1778181103\"\n      >\n\n      <img\n        src=\"https://cdn.shopify.com/s/files/1/0743/9790/9131/files/mentoria.avif?v=1778181102\"\n        alt=\"Mentoría Hola Marketing\"\n        loading=\"lazy\"\n      >\n\n    </picture>\n\n\n    <a\n      class=\"hm-mentoria-btn\"\n      href=\"https://wa.me/17866897873\"\n      target=\"_blank\"\n    >\n      Aplicar a mentoría <span>→</span>\n    </a>\n\n  </div>\n\n</section>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "custom_liquid_Kyi4gP": {
+      "type": "custom-liquid",
+      "name": "contacto",
+      "settings": {
+        "custom_liquid": "<section class=\"hm-contact\">\n  <style>\n    .hm-contact{\n      background:#fdf6ec;\n      padding:clamp(60px,8vw,120px) clamp(20px,5vw,80px);\n      overflow:hidden;\n      border-top:2px dashed #000;\n    }\n\n    .hm-contact *{\n      box-sizing:border-box;\n    }\n\n    .hm-contact-wrap{\n      max-width:1200px;\n      margin:auto;\n    }\n\n    .hm-contact-head{\n      text-align:center;\n      margin-bottom:50px;\n    }\n\n    .hm-contact-icon{\n      width:70px;\n      margin:0 auto 18px;\n      display:block;\n    }\n\n    .hm-contact-title{\n      margin:0 0 22px;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:clamp(34px,4vw,74px);\n      line-height:.95;\n      letter-spacing:-.07em;\n      text-transform:uppercase;\n      color:#000;\n    }\n\n    .hm-contact-sub{\n      margin:0;\n      font-family:\"DM Sans\", sans-serif;\n      font-size:clamp(18px,1.4vw,28px);\n      color:#000;\n    }\n\n    .hm-contact-form{\n      margin-top:50px;\n    }\n\n    .hm-contact-field{\n      margin-bottom:24px;\n    }\n\n    .hm-contact-label{\n      display:block;\n      margin-bottom:10px;\n      font-family:\"DM Sans\", sans-serif;\n      font-size:20px;\n      font-weight:700;\n      color:#000;\n    }\n\n    .hm-contact-input,\n    .hm-contact-textarea{\n      width:100%;\n      border:1px solid #bbb;\n      border-radius:18px;\n      background:#fff;\n      color:#000;\n\n      font-family:\"DM Sans\", sans-serif;\n      font-size:18px;\n\n      padding:18px 22px;\n      outline:none;\n\n      transition:.18s ease;\n    }\n\n    .hm-contact-textarea{\n      min-height:180px;\n      resize:none;\n    }\n\n    .hm-contact-input:focus,\n    .hm-contact-textarea:focus{\n      border-color:#2462c7;\n      box-shadow:0 0 0 3px rgba(36,98,199,.12);\n    }\n\n    .hm-contact-submit{\n      margin:34px auto 0;\n      width:min(520px,100%);\n      min-height:58px;\n\n      display:flex;\n      align-items:center;\n      justify-content:center;\n\n      border:2px solid #000;\n      border-radius:16px;\n\n      background:#2462c7;\n      color:#fff;\n\n      cursor:pointer;\n\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:20px;\n      font-weight:900;\n      text-transform:uppercase;\n\n      box-shadow:0 4px 0 #000;\n      transition:.18s ease;\n    }\n\n    .hm-contact-submit:hover{\n      background:#ff5000;\n      transform:translateY(-3px);\n      box-shadow:0 7px 0 #000;\n    }\n\n    .hm-contact-success,\n    .hm-contact-errors{\n      margin-bottom:30px;\n      font-family:\"DM Sans\", sans-serif;\n      font-size:18px;\n      font-weight:700;\n    }\n\n    .hm-contact-success{\n      color:#2d9f54;\n    }\n\n    .hm-contact-errors{\n      color:#ff5000;\n    }\n\n    @media(max-width:749px){\n\n      .hm-contact-title{\n        font-size:clamp(32px,11vw,52px);\n      }\n\n      .hm-contact-submit{\n        font-size:16px;\n      }\n\n    }\n\n  </style>\n\n\n  <div class=\"hm-contact-wrap\">\n\n    <div class=\"hm-contact-head\">\n\n      <img\n        class=\"hm-contact-icon\"\n        src=\"https://cdn.shopify.com/s/files/1/0743/9790/9131/files/cafe.avif?v=1778181690\"\n        alt=\"Café\"\n        loading=\"lazy\"\n      >\n\n      <h2 class=\"hm-contact-title\">\n        ¿Tomamos un café<br>\n        y hablamos de tu marca?\n      </h2>\n\n      <p class=\"hm-contact-sub\">\n        Queremos conocerte, escucharte y ayudarte a llevar tu proyecto más lejos.\n      </p>\n\n    </div>\n\n\n    {% form 'contact', class:'hm-contact-form' %}\n\n      {% if form.posted_successfully? %}\n        <div class=\"hm-contact-success\">\n          ¡Mensaje enviado! ☕ Ya estamos preparando el café.\n        </div>\n      {% endif %}\n\n      {{ form.errors | default_errors }}\n\n\n      <div class=\"hm-contact-field\">\n        <label class=\"hm-contact-label\">Nombre</label>\n\n        <input\n          class=\"hm-contact-input\"\n          type=\"text\"\n          name=\"contact[name]\"\n          required\n        >\n      </div>\n\n\n      <div class=\"hm-contact-field\">\n        <label class=\"hm-contact-label\">Email</label>\n\n        <input\n          class=\"hm-contact-input\"\n          type=\"email\"\n          name=\"contact[email]\"\n          required\n        >\n      </div>\n\n\n      <div class=\"hm-contact-field\">\n        <label class=\"hm-contact-label\">Mensaje</label>\n\n        <textarea\n          class=\"hm-contact-textarea\"\n          name=\"contact[body]\"\n          required\n        ></textarea>\n      </div>\n\n\n      <button\n        type=\"submit\"\n        class=\"hm-contact-submit\"\n      >\n        Enviar\n      </button>\n\n    {% endform %}\n\n  </div>\n\n</section>",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    }
+  },
+  "order": [
+    "product_list_fa6P9H",
+    "custom_liquid_zKFdty",
+    "custom_liquid_B3btF4",
+    "custom_liquid_HC3gEx",
+    "custom_liquid_DtEJE3",
+    "custom_liquid_z666WW",
+    "custom_liquid_fkg3Xk",
+    "custom_liquid_4JkkpA",
+    "custom_liquid_Kyi4gP"
+  ]
+}

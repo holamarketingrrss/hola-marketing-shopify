@@ -1,0 +1,36 @@
+/* Hola Marketing — global brand tokens & shared components.
+   Change a color here once instead of editing every section. */
+:root{
+  --hm-white: #ffffff;
+  --hm-black: #000000;
+  --hm-orange: #ff5000;
+  --hm-green: #2d9f54;
+  --hm-cream: #fdf6ec;
+  --hm-blue: #2462c7;
+  --hm-pink: #f5abd6;
+  --hm-violet: #d6a5ff;
+
+  /* Button system: every hm-btn on the site shares these. */
+  --hm-btn-bg: var(--hm-orange);
+  --hm-btn-bg-hover: var(--hm-blue);
+  --hm-btn-color: var(--hm-white);
+  --hm-btn-border: var(--hm-black);
+}
+
+.hm-btn{
+  border: 2px solid var(--hm-btn-border);
+  border-radius: 16px;
+  background: var(--hm-btn-bg);
+  color: var(--hm-btn-color);
+  text-decoration: none;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+
+.hm-btn:hover{
+  background: var(--hm-btn-bg-hover);
+  color: var(--hm-btn-color);
+}

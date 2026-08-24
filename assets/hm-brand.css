@@ -15,6 +15,17 @@
   --hm-btn-bg-hover: var(--hm-blue);
   --hm-btn-color: var(--hm-white);
   --hm-btn-border: var(--hm-black);
+
+  /* Shared section rhythm — every home section uses the same padding
+     and the same dashed bottom rule so spacing reads as one system. */
+  --hm-section-pad-y: clamp(60px, 8vw, 120px);
+  --hm-section-pad-x: clamp(20px, 5vw, 90px);
+  --hm-section-border: 2px dashed var(--hm-black);
+}
+
+.hm-section{
+  padding: var(--hm-section-pad-y) var(--hm-section-pad-x);
+  border-bottom: var(--hm-section-border);
 }
 
 .hm-btn{

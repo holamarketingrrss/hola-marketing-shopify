@@ -1,0 +1,33 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "disabled": true,
+      "settings": {}
+    },
+    "hm_portfolio_list_content": {
+      "type": "custom-liquid",
+      "name": "portfolio-list",
+      "settings": {
+        "custom_liquid": "<section class=\"hm-portfolio hm-section\" style=\"scroll-margin-top:90px;\">\n  <style>\n    .hm-portfolio{\n      background:var(--hm-cream);\n      padding-top:clamp(140px,16vw,190px);\n      overflow:hidden;\n    }\n\n    .hm-portfolio *{ box-sizing:border-box; }\n\n    .hm-portfolio-wrap{\n      max-width:1500px;\n      margin:0 auto;\n    }\n\n    .hm-portfolio-head{\n      text-align:center;\n      margin-bottom:clamp(50px,7vw,90px);\n    }\n\n    .hm-portfolio-eyebrow{\n      display:inline-block;\n      margin-bottom:18px;\n      padding:8px 18px;\n      border:2px solid var(--hm-black);\n      border-radius:999px;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:13px;\n      font-weight:700;\n      text-transform:uppercase;\n      letter-spacing:.04em;\n    }\n\n    .hm-portfolio-title{\n      margin:0 auto 20px;\n      max-width:900px;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:var(--hm-heading-size);\n      line-height:var(--hm-heading-line-height);\n      letter-spacing:-.05em;\n      text-transform:uppercase;\n      color:var(--hm-black);\n    }\n\n    .hm-portfolio-sub{\n      margin:0 auto;\n      max-width:640px;\n      font-family:\"DM Sans\", sans-serif;\n      font-size:var(--hm-body-size);\n      line-height:var(--hm-body-line-height);\n      color:var(--hm-black);\n    }\n\n    .hm-portfolio-grid{\n      display:grid;\n      grid-template-columns:repeat(3, 1fr);\n      gap:32px;\n    }\n\n    .hm-portfolio-card{\n      text-decoration:none;\n      color:var(--hm-black);\n      display:flex;\n      flex-direction:column;\n    }\n\n    .hm-portfolio-media{\n      aspect-ratio:4/5;\n      border:2px solid var(--hm-black);\n      border-radius:24px;\n      overflow:hidden;\n      background:var(--hm-white);\n    }\n\n    .hm-portfolio-media img{\n      width:100%;\n      height:100%;\n      object-fit:cover;\n      display:block;\n      transition:transform .3s ease;\n    }\n\n    .hm-portfolio-card:hover .hm-portfolio-media img{\n      transform:scale(1.05);\n    }\n\n    .hm-portfolio-name{\n      margin:22px 0 12px;\n      font-family:\"JetBrains Mono\", monospace;\n      font-size:clamp(20px,1.6vw,28px);\n      text-transform:uppercase;\n      letter-spacing:-.04em;\n    }\n\n    .hm-portfolio-tag{\n      width:fit-content;\n      padding:8px 18px;\n      border:2px solid var(--hm-black);\n      border-radius:999px;\n      font-family:\"DM Sans\", sans-serif;\n      font-size:14px;\n      font-weight:700;\n    }\n\n    .hm-portfolio-empty{\n      grid-column:1 / -1;\n      text-align:center;\n      padding:60px 20px;\n      border:2px dashed var(--hm-black);\n      border-radius:24px;\n      font-family:\"DM Sans\", sans-serif;\n      font-size:var(--hm-body-size);\n      color:var(--hm-black);\n    }\n\n    @media(max-width:1000px){\n      .hm-portfolio-grid{ grid-template-columns:1fr 1fr; }\n    }\n\n    @media(max-width:640px){\n      .hm-portfolio-grid{ grid-template-columns:1fr; }\n    }\n  </style>\n\n  <div class=\"hm-portfolio-wrap\">\n    <div class=\"hm-portfolio-head\">\n      <span class=\"hm-portfolio-eyebrow\">Portfolio</span>\n      <h1 class=\"hm-portfolio-title\">Proyectos que nos enorgullecen 💼</h1>\n      <p class=\"hm-portfolio-sub\">Marcas reales, resultados reales. Explorá algunos de los casos en los que trabajamos.</p>\n    </div>\n\n    <div class=\"hm-portfolio-grid\">\n      {%- paginate blog.articles by 12 -%}\n        {%- for article in blog.articles -%}\n          <a href=\"{{ article.url }}\" class=\"hm-portfolio-card\">\n            <div class=\"hm-portfolio-media\">\n              {%- if article.image -%}\n                <img src=\"{{ article.image | image_url: width: 900 }}\" alt=\"{{ article.title }}\" loading=\"lazy\">\n              {%- endif -%}\n            </div>\n            <h2 class=\"hm-portfolio-name\">{{ article.title }}</h2>\n            {%- if article.tags.size > 0 -%}\n              <span class=\"hm-portfolio-tag\">{{ article.tags.first }}</span>\n            {%- endif -%}\n          </a>\n        {%- else -%}\n          <div class=\"hm-portfolio-empty\">\n            Todavía no hay proyectos publicados — muy pronto vas a ver nuestros casos acá.\n          </div>\n        {%- endfor -%}\n      {%- endpaginate -%}\n    </div>\n  </div>\n</section>\n",
+        "color_scheme": "",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hm_portfolio_list_content"
+  ]
+}

@@ -21,11 +21,28 @@
   --hm-section-pad-y: clamp(60px, 8vw, 120px);
   --hm-section-pad-x: clamp(20px, 5vw, 90px);
   --hm-section-border: 2px dashed var(--hm-black);
+
+  /* Section typography standard — sized and spaced to match Bolsa de
+     Trabajo, which Yvette approved as the reference for every section. */
+  --hm-heading-size: clamp(28px, 3.6vw, 54px);
+  --hm-heading-line-height: 1.5;
+  --hm-body-size: clamp(16px, 1.2vw, 20px);
+  --hm-body-line-height: 1.5;
 }
 
 .hm-section{
   padding: var(--hm-section-pad-y) var(--hm-section-pad-x);
   border-bottom: var(--hm-section-border);
+}
+
+.hm-section-title{
+  font-size: var(--hm-heading-size);
+  line-height: var(--hm-heading-line-height);
+}
+
+.hm-section-text{
+  font-size: var(--hm-body-size);
+  line-height: var(--hm-body-line-height);
 }
 
 .hm-btn{

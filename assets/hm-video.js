@@ -49,6 +49,17 @@
 
     video.addEventListener('loadeddata', function () { tryPlay(video); });
     video.addEventListener('canplay', function () { tryPlay(video); });
+
+    // If something other than this script pauses a video that should be playing (a browser quirk,
+    // hovering the band, the OS saving power…), start it again.
+    video.addEventListener('pause', function () {
+      if (video.hmVisible && !video.ended && !document.hidden) {
+        setTimeout(function () { if (video.paused) tryPlay(video); }, 60);
+      }
+    });
+    if (video.parentNode) {
+      video.parentNode.addEventListener('pointerenter', function () { if (video.paused) tryPlay(video); });
+    }
     video.addEventListener('error', function () {
       // This tier can't be played here: fall back to the next, lighter one.
       if (video.hmSourceIndex + 1 < video.hmSources.length) {

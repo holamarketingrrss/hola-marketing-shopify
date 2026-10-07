@@ -14,6 +14,9 @@
  *   If a tier can't be played (or keeps stalling) the next, lighter one is used.
  * - A watchdog restarts any visible video whose clock stops moving.
  * - Playback is (re)tried once data has loaded, because iOS ignores play() on an empty video.
+ * - If a video can't start by itself (iOS Low Power Mode blocks autoplay, or the visitor has "Reduce motion"
+ *   on) a round play button is shown over it so it can be started with a tap; after any tap on the page the
+ *   other blocked videos start too.
  */
 (function () {
   var HQ_MIN_DEVICE_WIDTH = 2400;
@@ -48,10 +51,77 @@
     return sources;
   }
 
-  function tryPlay(video) {
-    if (reduceMotion || !video.hmVisible || !video.getAttribute('src')) return;
+  // ---- Play button shown when a video can't start on its own ----
+  var allVideos = [];
+  var unlockArmed = false;
+
+  function showPlayButton(video) {
+    if (video.hmPlayButton || !video.parentNode) return;
+
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'hm-video-play';
+    button.setAttribute('aria-label', 'Reproducir video');
+    button.innerHTML = '<svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>';
+    button.style.cssText =
+      'position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:6;' +
+      'width:64px;height:64px;padding:0 0 0 4px;border-radius:50%;border:2px solid #000;' +
+      'background:#fff;color:#000;display:flex;align-items:center;justify-content:center;' +
+      'cursor:pointer;box-shadow:0 4px 0 #000;';
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation(); // the video sits inside a link: don't follow it
+      tryPlay(video, true);
+    });
+
+    video.parentNode.appendChild(button);
+    video.hmPlayButton = button;
+  }
+
+  function hidePlayButton(video) {
+    if (!video.hmPlayButton) return;
+    if (video.hmPlayButton.parentNode) video.hmPlayButton.parentNode.removeChild(video.hmPlayButton);
+    video.hmPlayButton = null;
+  }
+
+  // iOS lets a blocked video start after any tap on the page, so start the others as well.
+  function armGestureUnlock() {
+    if (unlockArmed) return;
+    unlockArmed = true;
+
+    function unlock() {
+      document.removeEventListener('touchend', unlock, true);
+      document.removeEventListener('pointerup', unlock, true);
+      unlockArmed = false;
+      Array.prototype.forEach.call(allVideos, function (video) {
+        if (video.hmVisible && video.paused && video.getAttribute('src')) tryPlay(video, true);
+      });
+    }
+
+    document.addEventListener('touchend', unlock, true);
+    document.addEventListener('pointerup', unlock, true);
+  }
+
+  // force = the visitor asked for it (tapped play), so "Reduce motion" doesn't apply.
+  function tryPlay(video, force) {
+    if (!video.hmVisible || !video.getAttribute('src')) return;
+
+    if (force) video.hmAllowed = true; // remembered, so it keeps playing after scrolling away and back
+
+    if (reduceMotion && !video.hmAllowed) {
+      showPlayButton(video);
+      return;
+    }
+
     var promise = video.play();
-    if (promise && promise.catch) promise.catch(function () {});
+    if (promise && promise.catch) {
+      promise.catch(function (error) {
+        if (error && error.name === 'NotAllowedError') {
+          showPlayButton(video);
+          armGestureUnlock();
+        }
+      });
+    }
   }
 
   // Listeners are added once per element, however many times it is attached/detached.
@@ -61,6 +131,7 @@
 
     video.addEventListener('loadeddata', function () { tryPlay(video); });
     video.addEventListener('canplay', function () { tryPlay(video); });
+    video.addEventListener('playing', function () { hidePlayButton(video); });
 
     // If something other than this script pauses a video that should be playing, start it again.
     video.addEventListener('pause', function () {
@@ -99,6 +170,7 @@
 
   function detach(video) {
     if (!video.getAttribute('data-hm-loaded')) return;
+    hidePlayButton(video);
     video.pause();
     video.removeAttribute('src');
     video.load(); // releases the decoder and the buffered data
@@ -148,7 +220,7 @@
 
   function startWatchdog(videos) {
     setInterval(function () {
-      if (document.hidden || reduceMotion) return;
+      if (document.hidden) return;
 
       Array.prototype.forEach.call(videos, function (video) {
         if (!video.hmVisible || !video.getAttribute('data-hm-loaded') || !video.getAttribute('src')) {
@@ -159,7 +231,7 @@
 
         if (video.paused) {
           video.hmStuck = 0;
-          tryPlay(video);
+          if (!reduceMotion) tryPlay(video); // with "Reduce motion" it waits for the play button
           return;
         }
 
@@ -179,6 +251,7 @@
     var videos = document.querySelectorAll('video[data-hm-video]');
     if (!videos.length) return;
 
+    allVideos = videos;
     startWatchdog(videos);
 
     Array.prototype.forEach.call(videos, function (video) {

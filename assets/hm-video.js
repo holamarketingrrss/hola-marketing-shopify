@@ -9,14 +9,13 @@
  *   big (4K) videos in memory at once — that is what made playback stutter.
  * - Source tiers, best first:
  *     data-src-hq     → only screens that really need it (≥2400 device pixels wide, with a mouse): the original upload;
- *     data-src-mobile → phones (≤900px), when provided;
+ *     data-src-mobile → only for visitors with data saver on or a slow (2G/3G) connection, when provided;
  *     data-src        → everything else (Shopify's 1080p transcode).
  *   If a tier can't be played (or keeps stalling) the next, lighter one is used.
  * - A watchdog restarts any visible video whose clock stops moving.
  * - Playback is (re)tried once data has loaded, because iOS ignores play() on an empty video.
  */
 (function () {
-  var MOBILE_QUERY = '(max-width: 900px)';
   var HQ_MIN_DEVICE_WIDTH = 2400;
   var UNLOAD_DELAY_MS = 3000;
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -30,12 +29,20 @@
     return deviceWidth >= HQ_MIN_DEVICE_WIDTH && matches('(hover: hover) and (pointer: fine)');
   }
 
+  function isLiteConnection() {
+    var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    if (!connection) return false;
+    return !!connection.saveData || /(^|-)2g$|^3g$/.test(connection.effectiveType || '');
+  }
+
   function buildSources(video) {
     var sources = [];
     function add(url) { if (url && sources.indexOf(url) === -1) sources.push(url); }
 
     if (wantsHighQuality()) add(video.getAttribute('data-src-hq'));
-    if (matches(MOBILE_QUERY)) add(video.getAttribute('data-src-mobile'));
+    // The light (720p) file is only for visitors who asked for less data or are on a slow
+    // connection; phones on a normal connection get the same 1080p as everyone else.
+    if (isLiteConnection()) add(video.getAttribute('data-src-mobile'));
     add(video.getAttribute('data-src'));
     add(video.getAttribute('data-src-mobile'));
     return sources;

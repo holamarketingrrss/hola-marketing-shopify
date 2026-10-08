@@ -62,3 +62,32 @@
   background: var(--hm-btn-bg-hover);
   color: var(--hm-btn-color);
 }
+
+/* ---------------------------------------------------------------------------
+   Phone button size: every button (.hm-btn, and the quote page's .hmq-btn) has the
+   same height, type size, padding, radius and shadow, whatever section it lives in.
+   Widths are left alone (buttons inside forms and the menu drawer still fill their row).
+   !important because each section sets its own button size in its own <style>.
+   --------------------------------------------------------------------------- */
+@media (max-width: 700px){
+  .hm-btn,
+  .hmq-btn{
+    min-height: 46px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    font-size: 14px !important;
+    line-height: 1.1 !important;
+    letter-spacing: 0 !important;
+    gap: 10px !important;
+    border-radius: 14px !important;
+    box-shadow: 0 3px 0 var(--hm-black) !important;
+  }
+
+  .hm-btn span,
+  .hmq-btn span{
+    font-size: 1.2em !important;
+    line-height: 1 !important;
+  }
+}

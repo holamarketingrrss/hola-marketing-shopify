@@ -289,6 +289,15 @@
 ></script>
 
 <script>
+  // On-device video diagnostic: only when the URL carries ?hmdebug=1. Changes nothing otherwise.
+  if (/[?&]hmdebug(=|&|$)/.test(location.search)) {
+    var hmDebugScript = document.createElement('script');
+    hmDebugScript.src = '{{ 'hm-debug.js' | asset_url }}';
+    document.head.appendChild(hmDebugScript);
+  }
+</script>
+
+<script>
   const Theme = {
     translations: {
       placeholder_image: `{{ 'content.placeholder_image' | t }}`,

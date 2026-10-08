@@ -55,14 +55,12 @@
   var allVideos = [];
   var unlockArmed = false;
 
-  function showPlayButton(video, reason) {
+  function showPlayButton(video) {
     if (video.hmPlayButton || !video.parentNode) return;
-    if (window.console && console.info) console.info('[hm-video] play button shown —', reason, '| prefers-reduced-motion:', reduceMotion, '|', navigator.userAgent);
 
     var button = document.createElement('button');
     button.type = 'button';
     button.className = 'hm-video-play';
-    button.setAttribute('data-reason', reason || 'unknown');
     button.setAttribute('aria-label', 'Reproducir video');
     button.innerHTML = '<svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>';
     button.style.cssText =
@@ -111,7 +109,7 @@
     if (force) video.hmAllowed = true; // remembered, so it keeps playing after scrolling away and back
 
     if (reduceMotion && !video.hmAllowed) {
-      showPlayButton(video, 'reduced-motion');
+      showPlayButton(video);
       return;
     }
 
@@ -119,7 +117,7 @@
     if (promise && promise.catch) {
       promise.catch(function (error) {
         if (error && error.name === 'NotAllowedError') {
-          showPlayButton(video, 'autoplay-blocked (NotAllowedError)');
+          showPlayButton(video);
           armGestureUnlock();
         }
       });
@@ -162,14 +160,6 @@
     wire(video);
     if (video.getAttribute('data-hm-loaded')) return;
     video.setAttribute('data-hm-loaded', '1');
-
-    // Everything an autoplaying, muted, inline video needs, set before the source is attached.
-    video.defaultMuted = true;
-    video.muted = true;
-    video.playsInline = true;
-    video.setAttribute('playsinline', '');
-    video.setAttribute('webkit-playsinline', '');
-    video.setAttribute('autoplay', '');
 
     video.hmSources = buildSources(video);
     // Stay on a lighter tier if this video already had to step down earlier.

@@ -21,7 +21,9 @@
 (function () {
   var HQ_MIN_DEVICE_WIDTH = 2400;
   var UNLOAD_DELAY_MS = 3000;
-  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // These are muted, decorative background loops, so they play whatever 'prefers-reduced-motion' says:
+  // Chrome on iOS reports it as 'reduce' on phones where nobody asked for it, which left the videos
+  // stuck on a play button. The tap-to-play button below is now only for autoplay really being blocked.
 
   function matches(query) {
     return !!(window.matchMedia && window.matchMedia(query).matches);
@@ -107,11 +109,6 @@
     if (!video.hmVisible || !video.getAttribute('src')) return;
 
     if (force) video.hmAllowed = true; // remembered, so it keeps playing after scrolling away and back
-
-    if (reduceMotion && !video.hmAllowed) {
-      showPlayButton(video);
-      return;
-    }
 
     var promise = video.play();
     if (promise && promise.catch) {
@@ -231,7 +228,7 @@
 
         if (video.paused) {
           video.hmStuck = 0;
-          if (!reduceMotion) tryPlay(video); // with "Reduce motion" it waits for the play button
+          tryPlay(video);
           return;
         }
 
